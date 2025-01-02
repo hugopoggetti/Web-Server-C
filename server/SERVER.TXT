@@ -1,5 +1,3 @@
-
-
 1. First we need to create a server socket and we need to config socket
         man socket
 

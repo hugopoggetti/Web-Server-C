@@ -1,7 +1,7 @@
-SRC = $(wildcard Server/*.c)
+SRC = $(wildcard server/*.c)
 
-OBJ =  $(SRC:Server/.c=.o)
-NAME = server
+OBJ =  $(SRC:server/.c=.o)
+NAME = start_server
 
 
 all: $(OBJ)

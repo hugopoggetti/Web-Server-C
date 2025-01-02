@@ -1,14 +1,4 @@
 #include "server.h"
-#include <complex.h>
-#include <ctype.h>
-#include <fcntl.h>
-#include <stdio.h>
-#include <stdbool.h>
-#include <sys/stat.h>
-#include <string.h>
-#include <time.h>
-#include <unistd.h>
-
 
 bool is_get(char *buffer)
 {
@@ -44,7 +34,6 @@ char *get_file_type(char *file)
 
 const char *get_content_type(const char *file)
 {
-    //printf("file format = [%s]\n", file);
     if (file == NULL)
         return "text/html";
     else if (strcmp(file, "html") == 0 || strcmp(file, "htm") == 0)
@@ -139,12 +128,8 @@ void *handle_client(void *arg)
         printf("\n\rGET %s\n", root);
         write(client_fd, response, len_response);
         close(client_fd);
-        // if (file_type != NULL)
-        //     free(file_type);
-        // if (root != NULL)
-        //     free(root);
-        // if (response != NULL)
-        //     free(response);
+        if (response != NULL)
+            free(response);
     }
     if (buffer != NULL)
         free(buffer);
