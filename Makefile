@@ -13,6 +13,9 @@ clean:
 	rm -f *.o
 	rm -f $(NAME)
 
-re:
-	make clean
+fclean:
+	rm -f *.o
+	rm -f $(NAME)
+
+re:		fclean all
 
