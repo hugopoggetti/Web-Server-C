@@ -1,4 +1,4 @@
-# 🌍⚡ Web Server in C 🚀  
+# 🌍⚡ Simple Web Server in C 🚀  
 
 A lightweight and fast web server built in **C**. Perfect for understanding the fundamentals of HTTP servers!  
 
